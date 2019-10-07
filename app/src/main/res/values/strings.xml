@@ -6,5 +6,6 @@
   <string name="font_semibold" tools:ignore="ReferenceType">@font/fira_sans_semibold</string>
   <string name="font_bold" tools:ignore="ReferenceType">@font/fira_sans_bold</string>
 
+  <string name="somehting_went_wrong">Something went wrong</string>
 
 </resources>
