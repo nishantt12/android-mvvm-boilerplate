@@ -4,17 +4,17 @@ import android.util.Log
 import com.foodora.BuildConfig
 
 object L {
-    fun e(TAG: String? = "Funtooler-response", message: String?) {
+    fun e(TAG: String? = "Foodora-response", message: String?) {
         if (BuildConfig.DEBUG)
             Log.e(TAG, message)
     }
 
-    fun d(TAG: String? = "Funtooler-response", message: String?) {
+    fun d(TAG: String? = "Foodora-response", message: String?) {
         if (BuildConfig.DEBUG)
             Log.d(TAG, message)
     }
 
-    fun i(TAG: String? = "Funtooler-response", message: String?) {
+    fun i(TAG: String? = "Foodora-response", message: String?) {
         if (BuildConfig.DEBUG)
             Log.i(TAG, message)
     }

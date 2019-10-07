@@ -17,7 +17,7 @@ abstract class BaseActivity : AppCompatActivity() {
     mContext = this
   }
 
-  fun showToast(message: String? = mContext?.getString(R.string.somehting_went_wrong)) {
+  fun showToast(message: String? = mContext?.getString(R.string.something_went_wrong)) {
     mContext?.let { Util.showToast(message, mContext) }
   }
 

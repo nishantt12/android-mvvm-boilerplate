@@ -28,7 +28,7 @@ class CatalogViewModel @Inject constructor(
         catalogRepository.getCatalog(isForced) { catalog, error ->
             if (error) {
                 hideProgress.postValue(null)
-                errorMessage.postValue(context.getString(R.string.somehting_went_wrong))
+                errorMessage.postValue(context.getString(R.string.something_went_wrong))
             } else {
                 Timber.d("getCatalog")
                 hideProgress.postValue(null)

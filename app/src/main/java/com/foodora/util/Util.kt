@@ -10,7 +10,7 @@ import com.foodora.BuildConfig
 
 object Util {
 
-  fun L(TAG: String? = "Funtooler-response", message: String?) {
+  fun L(TAG: String? = "Foodora-response", message: String?) {
     if (BuildConfig.DEBUG)
       Log.e(TAG, message)
   }
