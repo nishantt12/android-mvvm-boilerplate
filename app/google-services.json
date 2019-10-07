@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "634003210998",
+    "firebase_url": "https://funtoolearn-1562137716235.firebaseio.com",
+    "project_id": "funtoolearn-1562137716235",
+    "storage_bucket": "funtoolearn-1562137716235.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:634003210998:android:b126491db6980833",
+        "android_client_info": {
+          "package_name": "com.funtoolearn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "634003210998-pk65akdbsv0u4ap0q1lc297tglvdsnd8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.funtoolearn",
+            "certificate_hash": "9cd4cd429ce1a5081fa6a1d60004efb27590f504"
+          }
+        },
+        {
+          "client_id": "634003210998-tj00uo83kdq2g1nuorndqimtipfpknkb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9Vys33MaD3hUdemCzFfMfBeo4o7GEOQw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "634003210998-tj00uo83kdq2g1nuorndqimtipfpknkb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

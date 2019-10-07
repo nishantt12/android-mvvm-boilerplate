@@ -1,0 +1,55 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+  <string name="app_name">Funtolearn</string>
+  <string name="font_regular" tools:ignore="ReferenceType">@font/fira_sans</string>
+  <string name="font_medium" tools:ignore="ReferenceType">@font/fira_sans_medium</string>
+  <string name="font_regular_black" tools:ignore="ReferenceType">@font/fira_sans_black</string>
+  <string name="font_semibold" tools:ignore="ReferenceType">@font/fira_sans_semibold</string>
+  <string name="font_bold" tools:ignore="ReferenceType">@font/fira_sans_bold</string>
+
+  <string name="facebook_app_id">882776645409555</string>
+  <string name="fb_login_protocol_scheme">fb882776645409555</string>
+
+
+  <string name="welcome_text">Welcome back.</string>
+  <string name="please_login_text">Please login to continue</string>
+  <string name="email_hint">example@gmail.com</string>
+  <string name="password_hint">Password</string>
+  <string name="forget_password">Forgot Password</string>
+  <string name="sign_in">Sign In</string>
+  <string name="have_account">Don’t have an account?</string>
+  <string name="google_text">Google</string>
+  <string name="fb_text">Facebook</string>
+  <string name="create_new_text">Create new</string>
+  <string name="valid_email">Please enter valid email Id</string>
+  <string name="valid_password">Please enter valid password</string>
+  <string name="valid_mobile">Please enter valid mobile no</string>
+  <string name="valid_name">Please enter valid name</string>
+  <string name="valid_username">Please enter valid username</string>
+  <string name="valid_confirm_pw">Confirm password can\'t be empty</string>
+  <string name="confirm_pw_not_same">Confirm password is not same as password</string>
+  <string name="signup_text">Sign up</string>
+  <string name="step_1">Step 1/2</string>
+  <string name="create_account_text">Create your free account</string>
+  <string name="fullname_hint">Full Name</string>
+  <string name="mobile_no_hint_title">Mobile no.</string>
+  <string name="mobile_no_hint">9999999999</string>
+  <string name="email_hint_title">Email Address</string>
+  <string name="already_have_account">Already have an account?</string>
+  <string name="login_here_text">Login here</string>
+  <string name="username_title">Hello %1$s</string>
+  <string name="subtitle_username_pw_act">In order to proceed, Please create your username and password.</string>
+  <string name="username_title_hint">Choose Username</string>
+  <string name="example_hint">example</string>
+  <string name="create_pw_title_hint">Create Passsword</string>
+  <string name="confirm_pw_hint">Confirm Passsword</string>
+  <string name="create_an_account">Create an Account</string>
+  <string name="subtitle_signup_second_act">In order to continue, Please share your contact no.</string>
+  <string name="continue_text">Continue</string>
+  <string name="verify_mobile_text">Verify Mobile</string>
+  <string name="subtitle_verify_mobile">We have sent an OTP to your mobile</string>
+  <string name="please_enter_otp_text">Please enter OTP to verify</string>
+  <string name="not_receive_otp">I didn’t receive a code!</string>
+  <string name="login_using_email">Login Using Email</string>
+  <string name="loading">Please wait...</string>
+  <string name="somehting_went_wrong">Something went wrong</string>
+</resources>

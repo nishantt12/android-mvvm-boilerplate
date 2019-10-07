@@ -1,0 +1,146 @@
+{
+	"items": [{
+		"id": "foodoraX1",
+		"sku": "JA219AA51WPSMY",
+		"name": "Slim Fit Jeans",
+		"price": {
+			"current": 49.99,
+			"original": 79.99,
+			"currency": "EUR"
+		},
+		"brand": "JAXON",
+		"image": "http://static-origin.zalora.com.my/p/jaxon-4980-310333-19.jpg",
+		"published_at": "2015-09-22 17:43:12",
+		"is_active": true
+	}, {
+		"id": "foodoraX2",
+		"sku": "JA219AA51WPSMY",
+		"name": "Trendy Jeans",
+		"price": {
+			"current": 69.99,
+			"original": 69.99,
+			"currency": "EUR"
+		},
+		"brand": "JAXJEFFERSONON",
+		"image": "http://static-origin.zalora.com.my/p/jefferson-0314-969233-1.jpg",
+		"published_at": "2015-09-02 10:35:07",
+		"is_active": true
+	}, {
+		"id": "foodoraX3",
+		"sku": "JA219AA28NIHMY",
+		"name": "Multipack Basic Slim Fit Shorts (2in1)",
+		"price": {
+			"current": 76.50,
+			"original": 76.50,
+			"currency": "EUR"
+		},
+		"brand": "JAXON",
+		"image": "http://static-origin.zalora.com.my/p/jaxon-0826-173523-1.jpg",
+		"published_at": "2015-09-14 17:04:57",
+		"is_active": true
+	}, {
+		"id": "foodoraX4",
+		"sku": "BA219AA28NIHMY",
+		"name": "Hoodie T-shirt Special Edition",
+		"price": {
+			"current": 35.0,
+			"original": 45.0,
+			"currency": "EUR"
+		},
+		"brand": "JAXON",
+		"image": "http://static-origin.zalora.com.my/p/jaxon-2993-472643-1.jpg",
+		"published_at": "2015-09-22 17:59:20",
+		"is_active": true
+	}, {
+		"id": "foodoraX5",
+		"sku": "TA219AA28NIHMY",
+		"name": "Raglan Long Sleeves Tee",
+		"price": {
+			"current": 55.0,
+			"original": 73.0,
+			"currency": "EUR"
+		},
+		"brand": "ZALORA",
+		"image": "http://static-origin.zalora.com.my/p/zalora-2625-987513-1.jpg",
+		"published_at": "2015-09-05 00:38:47",
+		"is_active": true
+	}, {
+		"id": "foodoraX6",
+		"sku": "TA219AA29NIHMY",
+		"name": "Trendy Sweatshirt",
+		"price": {
+			"current": 59.0,
+			"original": 59.0,
+			"currency": "EUR"
+		},
+		"brand": "JAXON",
+		"image": "http://static-origin.zalora.com.my/p/jaxon-2812-754423-1.jpg",
+		"published_at": "2015-09-02 10:13:31",
+		"is_active": true
+	}, {
+		"id": "foodoraX7",
+		"sku": "TA219AA29NIHNY",
+		"name": "Striped Knee Panel Joggers",
+		"price": {
+			"current": 95.99,
+			"original": 113.0,
+			"currency": "EUR"
+		},
+		"brand": "ZALORA",
+		"image": "http://static-origin.zalora.com.my/p/zalora-6255-483023-1.jpg",
+		"published_at": "2015-09-09 00:50:25",
+		"is_active": true
+	}, {
+		"id": "foodoraX8",
+		"sku": "TA209AA29NIHNY",
+		"name": "Basic Oxford Grosgrain Long Sleeve Shirt",
+		"price": {
+			"current": 48.0,
+			"original": 48.0,
+			"currency": "EUR"
+		},
+		"brand": "ZALORA",
+		"image": "http://static-origin.zalora.com.my/p/zalora-basics-5797-204882-1.jpg",
+		"published_at": "2015-04-17 09:03:19",
+		"is_active": true
+	}, {
+		"id": "foodoraX9",
+		"sku": "BA209AA29NIZNY",
+		"name": "Straight Cut Jeans",
+		"price": {
+			"current": 69.99,
+			"original": 69.99,
+			"currency": "EUR"
+		},
+		"brand": "JAXON",
+		"image": "http://static-origin.zalora.com.my/p/jaxon-2849-056133-1.jpg",
+		"published_at": "2015-09-02 10:05:58",
+		"is_active": true
+	}, {
+		"id": "foodoraX10",
+		"sku": "AB319AA29NIZNY",
+		"name": "Super Trendy Jeans",
+		"price": {
+			"current": 69.99,
+			"original": 69.99,
+			"currency": "EUR"
+		},
+		"brand": "JAXON",
+		"image": "http://static-origin.zalora.com.my/p/jefferson-9989-211643-1.jpg",
+		"published_at": "2015-09-17 17:44:46",
+		"is_active": true
+	}, {
+		"id": "foodoraX11",
+		"sku": "AB319AA29NIHHKN",
+		"name": "Inactive product",
+		"price": {
+			"current": 100.99,
+			"original": 100.99,
+			"currency": "EUR"
+		},
+		"brand": "JAXON",
+		"image": "http://zalora-media-live-my.s3.amazonaws.com/product/21/1643/2.jpg",
+		"published_at": "2015-09-17 17:44:46",
+		"is_active": false
+	}]
+}

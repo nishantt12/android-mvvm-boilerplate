@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <declare-styleable name="CustomEditText">
+    <attr format="string" name="title_hint"/>
+    <attr format="string" name="edit_text_hint"/>
+    <attr name="android:inputType"/>
+    <attr format="integer" name="max_length"/>
+    <attr format="boolean" name="is_password"/>
+
+  </declare-styleable>
+
+</resources>
