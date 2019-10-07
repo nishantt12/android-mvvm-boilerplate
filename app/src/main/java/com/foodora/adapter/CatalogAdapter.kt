@@ -45,8 +45,9 @@ class CatalogAdapter(private val items: List<Product>, private val listener: ((P
             } else {
                 itemView.tv_price_original.visibility = View.VISIBLE
                 itemView.tv_price_original.setPaintFlags(itemView.tv_price_original.getPaintFlags() and Paint.STRIKE_THRU_TEXT_FLAG.inv())
+                itemView.tv_price_original.text = " ${product?.price?.original} ${product?.price?.currency}"
             }
-            itemView.tv_price.text = " ${product?.price?.original} ${product?.price?.currency}"
+            itemView.tv_price.text = " ${product?.price?.current} ${product?.price?.currency}"
             itemView.tv_brand.text = product?.name
 
         }
