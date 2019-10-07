@@ -1,0 +1,7 @@
+1. Landscape mode
+2. Filter inactive products
+3. Show only original or real
+4. Background of dominant image
+5. Sort products by name
+6. Add Database
+7. Add unit test

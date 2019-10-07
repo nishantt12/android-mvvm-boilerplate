@@ -1,5 +1,6 @@
 package com.foodora.adapter
 
+import android.graphics.Paint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -39,6 +40,12 @@ class CatalogAdapter(private val items: List<Product>, private val listener: ((P
                     .into(itemView.img_catalog)
 
             itemView.tv_name.text = product?.name
+            if (product?.price?.original == product?.price?.current) {
+                itemView.tv_price_original.visibility = View.GONE
+            } else {
+                itemView.tv_price_original.visibility = View.VISIBLE
+                itemView.tv_price_original.setPaintFlags(itemView.tv_price_original.getPaintFlags() and Paint.STRIKE_THRU_TEXT_FLAG.inv())
+            }
             itemView.tv_price.text = " ${product?.price?.original} ${product?.price?.currency}"
             itemView.tv_brand.text = product?.name
 

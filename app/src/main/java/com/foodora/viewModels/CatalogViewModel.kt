@@ -20,21 +20,30 @@ class CatalogViewModel @Inject constructor(
     var errorMessage: MutableLiveData<String> = MutableLiveData()
     var showProgress: MutableLiveData<Void> = MutableLiveData()
     var hideProgress: MutableLiveData<Void> = MutableLiveData()
-    var catalog: MutableLiveData<Catalog> = MutableLiveData()
+    var catalogLiveData: MutableLiveData<Catalog> = MutableLiveData()
 
 
     fun getCatalog(isForced: Boolean) {
         showProgress.postValue(null)
-        catalogRepository.getCatalog(isForced).observeOn(AndroidSchedulers.mainThread())
-                .subscribeOn(Schedulers.io())
-                .subscribe({
-                    Timber.d("getCatalog")
-                    hideProgress.postValue(null)
-                    catalog.postValue(it)
-                }, {
-                    hideProgress.postValue(null)
-                    errorMessage.postValue(context.getString(R.string.somehting_went_wrong))
-                })
+        catalogRepository.getCatalog(isForced) { catalog, error ->
+            if (error) {
+                hideProgress.postValue(null)
+                errorMessage.postValue(context.getString(R.string.somehting_went_wrong))
+            } else {
+                Timber.d("getCatalog")
+                hideProgress.postValue(null)
+                catalogLiveData.postValue(filterCatalog(catalog))
+            }
+        }
+    }
+
+    private fun filterCatalog(catalog: Catalog?): Catalog? {
+        catalog?.let {
+            catalog.items = it.items.sortedWith(compareBy { it.name })
+                    .filter { it.is_active }
+        }
+
+        return catalog
     }
 
     override fun onCleared() {

@@ -23,6 +23,8 @@
     <TextView
         style="@style/TextCatalog"
         android:id="@+id/tv_name"
+        android:layout_width="0dp"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toRightOf="@+id/img_catalog"
         app:layout_constraintTop_toTopOf="@+id/img_catalog"
         android:layout_marginLeft="@dimen/margin_16"
@@ -38,13 +40,21 @@
         tools:text="400 USD"
         />
 
+    <TextView
+        style="@style/TextCatalog"
+        android:id="@+id/tv_price_original"
+        android:layout_marginTop="@dimen/margin_5"
+        app:layout_constraintTop_toBottomOf="@+id/tv_price"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_name"
+        tools:text="400 USD"
+        />
 
     <TextView
         style="@style/TextCatalog"
         android:id="@+id/tv_brand"
         android:layout_marginTop="@dimen/margin_5"
-        app:layout_constraintTop_toBottomOf="@+id/tv_price"
-        app:layout_constraintLeft_toLeftOf="@+id/tv_price"
+        app:layout_constraintTop_toBottomOf="@+id/tv_price_original"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_price_original"
         tools:text="JAXON"
         />
 

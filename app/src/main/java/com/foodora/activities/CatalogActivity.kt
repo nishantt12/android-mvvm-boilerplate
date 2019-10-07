@@ -1,6 +1,9 @@
 package com.foodora.activities
 
+import android.content.Context
+import android.content.res.Configuration
 import android.os.Bundle
+import android.view.WindowManager
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
@@ -33,6 +36,7 @@ class CatalogActivity : BaseActivity(), SwipeRefreshLayout.OnRefreshListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        Timber.d("onCreate")
         activityCatalogBinding = DataBindingUtil.setContentView(this, R.layout.activity_catalog)
         init()
         setObservers()
@@ -51,13 +55,20 @@ class CatalogActivity : BaseActivity(), SwipeRefreshLayout.OnRefreshListener {
                 CatalogViewModel::class.java)
         activityCatalogBinding?.catalogViewModel = catalogViewModel
 
-        recyclerView.layoutManager = GridLayoutManager(this, 1)
+        val rotation = (getSystemService(Context.WINDOW_SERVICE) as WindowManager).defaultDisplay.orientation
+        if (rotation == 0 || rotation == 180) {
+            recyclerView.layoutManager = GridLayoutManager(this, 1)
+        } else {
+            recyclerView.layoutManager = GridLayoutManager(this, 2)
+
+        }
+
 
     }
 
     private fun setObservers() {
         showProgressDialog()
-        catalogViewModel.catalog.observe(this, Observer { catalog ->
+        catalogViewModel.catalogLiveData.observe(this, Observer { catalog ->
             Timber.d("my catalogs  $catalog")
             swipe_refresh_layout.setRefreshing(false);
 
@@ -71,7 +82,7 @@ class CatalogActivity : BaseActivity(), SwipeRefreshLayout.OnRefreshListener {
         })
     }
 
-    private fun setupSwipeRefresh(){
+    private fun setupSwipeRefresh() {
         swipe_refresh_layout.setOnRefreshListener(this);
         swipe_refresh_layout.setColorSchemeResources(R.color.colorPrimary,
                 android.R.color.holo_green_dark,
@@ -91,5 +102,15 @@ class CatalogActivity : BaseActivity(), SwipeRefreshLayout.OnRefreshListener {
     override fun onDestroy() {
         compositeDisposable.dispose()
         super.onDestroy()
+    }
+
+    override fun onConfigurationChanged(newConfig: Configuration) {
+        super.onConfigurationChanged(newConfig)
+        if (newConfig.orientation === Configuration.ORIENTATION_LANDSCAPE) {
+            Timber.d("onConfigurationChanged landscape")
+        } else {
+            Timber.d("onConfigurationChanged portrait")
+
+        }
     }
 }
