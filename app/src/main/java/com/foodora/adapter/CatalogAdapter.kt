@@ -41,17 +41,19 @@ class CatalogAdapter(private val items: List<Product>, private val listener: ((P
                     .into(itemView.img_catalog)
 
             itemView.tv_name.text = product?.name
+            Timber.d("originalPrice: 0")
+
             if (product?.price?.original?.compareTo(product?.price?.current) == 0) {
                 Timber.d("originalPrice: 1")
                 itemView.tv_price_original.visibility = View.GONE
             } else {
                 itemView.tv_price_original.visibility = View.VISIBLE
-                itemView.tv_price_original.setPaintFlags(itemView.tv_price_original.getPaintFlags() and Paint.STRIKE_THRU_TEXT_FLAG)
                 val originalPrice = "${product?.price?.original} ${product?.price?.currency}"
                 Timber.d("originalPrice: $originalPrice")
                 itemView.tv_price_original.text = originalPrice
+                itemView.tv_price_original.setPaintFlags(itemView.tv_price_original.getPaintFlags() and Paint.STRIKE_THRU_TEXT_FLAG.inv())
             }
-            itemView.tv_price.text = " ${product?.price?.current} ${product?.price?.currency}"
+            itemView.tv_price.text = "${product?.price?.current} ${product?.price?.currency}"
             itemView.tv_brand.text = product?.name
 
         }
