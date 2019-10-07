@@ -50,7 +50,6 @@ class CatalogAdapter(private val items: List<Product>, private val listener: ((P
                         override fun onResourceReady(resource: Bitmap, transition: com.bumptech.glide.request.transition.Transition<in Bitmap>?) {
                             Palette.Builder(resource).generate { it?.let { palette ->
                                 val dominantColor = palette.getDominantColor(ContextCompat.getColor(itemView.context, R.color.colorAccent))
-                               Timber.d("dominantColor: $dominantColor")
                                 itemView.main_layout.setBackgroundColor(dominantColor)
 
                             } }
@@ -64,18 +63,13 @@ class CatalogAdapter(private val items: List<Product>, private val listener: ((P
                     })
 
             itemView.tv_name.text = product?.name
-            Timber.d("originalPrice: 0")
-
             if (product?.price?.original?.compareTo(product?.price?.current) == 0) {
-                Timber.d("originalPrice: 1")
                 itemView.tv_price_original.visibility = View.GONE
             } else {
                 itemView.tv_price_original.visibility = View.VISIBLE
                 val originalPrice = "${product?.price?.original} ${product?.price?.currency}"
-                Timber.d("originalPrice: $originalPrice")
                 itemView.tv_price_original.paintFlags = itemView.tv_price_original.paintFlags or Paint.STRIKE_THRU_TEXT_FLAG
 
-//                itemView.tv_price_original.setPaintFlags(itemView.tv_price_original.getPaintFlags() or Paint.STRIKE_THRU_TEXT_FLAG.inv())
                 itemView.tv_price_original.text = originalPrice
             }
             itemView.tv_price.text = "${product?.price?.current} ${product?.price?.currency}"
